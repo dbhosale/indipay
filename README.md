@@ -6,7 +6,7 @@ The Laravel 5 Package for Indian Payment Gateways. Currently supported gateway: 
 <h2>Installation</h2>
 <b>Step 1:</b> Install package using composer
 <pre><code>
-    composer require softon/indipay
+    composer require dbhosale/indipay
 </pre></code>
 
 <b>Step 2:</b> Add the service provider to the config/app.php file in Laravel
