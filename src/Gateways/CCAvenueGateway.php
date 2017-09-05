@@ -90,7 +90,7 @@ class CCAvenueGateway implements PaymentGatewayInterface
             'redirect_url' => 'required|url',
             'cancel_url' => 'required|url',
             'language' => 'required',
-            'tid' => 'required',
+            /*'tid' => 'required',remove this*/
             'order_id' => 'required',
             'amount' => 'required|numeric',
         ]);
