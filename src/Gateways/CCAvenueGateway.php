@@ -41,7 +41,7 @@ class CCAvenueGateway implements PaymentGatewayInterface
 
         $this->checkParameters($this->parameters);
 
-        foreach ($this->parameters as $key=>$value) {
+        foreach ($this->parameters as $key => $value) {
             $this->merchantData .= $key.'='.$value.'&';
         }
 
@@ -135,7 +135,7 @@ class CCAvenueGateway implements PaymentGatewayInterface
         $encryptedText=$this->hextobin($encryptedText);
         $openMode = @mcrypt_module_open(MCRYPT_RIJNDAEL_128, '', 'cbc', '');
         @mcrypt_generic_init($openMode, $secretKey, $initVector);
-        $decryptedText = mdecrypt_generic($openMode, $encryptedText);
+        $decryptedText = @mdecrypt_generic($openMode, $encryptedText);
         $decryptedText = rtrim($decryptedText, "\0");
         @mcrypt_generic_deinit($openMode);
         return $decryptedText;
